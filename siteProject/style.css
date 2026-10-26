@@ -277,6 +277,51 @@ ul {
     margin: auto;
 }
 
+#contact {
+    text-align: center;
+    border: 1px solid grey; /* Temporary */
+    padding-left: clamp(10px, 10vw, 250px);
+    padding-right: clamp(10px, 10vw, 250px);
+}
+
+form {
+    border: 4px solid white;
+    padding: 16px 10vw 16px 10vw;
+    margin: 12px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Type isn't specified because only text inputs are used */
+input, textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+
+input:focus, textarea:focus, form button:focus {
+    outline: none;
+    border-color: rgb(0, 123, 255);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+    width: 160px;
+    height: 40px;
+    margin-top: 16px;
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
 /*  ==================
     Footer Box Styling
     ==================  */
