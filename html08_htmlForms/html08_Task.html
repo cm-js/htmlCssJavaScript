@@ -27,12 +27,23 @@
        - background-color: #f5f5f5
     */
     /* YOUR CODE HERE */
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
 
     /* TODO 11: Style the h1
        - color: #333
        - text-align: center
     */
     /* YOUR CODE HERE */
+    h1 {
+      color: #333;
+      text-align: center;
+    }
 
     /* TODO 12: Style the form (make it a white card)
        - background-color: white
@@ -41,6 +52,12 @@
        - box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
     */
     /* YOUR CODE HERE */
+    form {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
 
     /* TODO 13: Style fieldset
        - border: 1px solid #ddd
@@ -50,6 +67,13 @@
        - background-color: #fafafa
     */
     /* YOUR CODE HERE */
+    fieldset {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 15px 0;
+      background-color: #fafafa;
+    }
 
     /* TODO 14: Style legend
        - font-weight: bold
@@ -58,6 +82,12 @@
        - padding: 0 8px
     */
     /* YOUR CODE HERE */
+    legend {
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #333;
+      padding: 0 8px;
+    }
 
     /* TODO 15: Style label (each label on its own line, above its box)
        - display: block
@@ -67,12 +97,22 @@
        - color: #333
     */
     /* YOUR CODE HERE */
+    label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
 
     /* TODO 16: Make the radio and checkbox labels plain
        - Select the class .choice
        - font-weight: normal
     */
     /* YOUR CODE HERE */
+    .choice {
+      font-weight: normal;
+    }
 
     /* TODO 17: Style the text-style boxes, the dropdown, and the textarea.
        Use this selector list (NOT radio or checkbox):
@@ -88,6 +128,18 @@
        - box-sizing: border-box
     */
     /* YOUR CODE HERE */
+    input[type="text"], input[type="email"], input[type="password"],
+    input[type="tel"], input[type="number"], input[type="date"],
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
 
     /* TODO 18: Style the :focus state
        Selector list: input:focus, select:focus, textarea:focus
@@ -96,6 +148,11 @@
        - box-shadow: 0 0 5px rgba(0, 123, 255, 0.4)
     */
     /* YOUR CODE HERE */
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: rgba(0, 123, 255, 0.4);
+    }
 
     /* TODO 19: Style the buttons
        a) .button-group
@@ -120,6 +177,35 @@
           - background-color: #545b62
     */
     /* YOUR CODE HERE */
+    .button-group {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      transition-duration: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button[type="reset"] {
+      background-color: #6c757d;
+    }
+
+    button[type="reset"] {
+      background-color: #545b62;
+    }
 
     /* TODO 20: Add a media query for small screens
        @media (max-width: 600px)
@@ -129,6 +215,13 @@
            - margin: 10px 0
     */
     /* YOUR CODE HERE */
+    @media (max-width: 600px) {
+      button {
+         display: block;
+         width: 100%;
+         margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body>

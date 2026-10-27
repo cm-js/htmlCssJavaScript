@@ -310,8 +310,8 @@ input, textarea {
 
 input:focus, textarea:focus, form button:focus {
     outline: none;
-    border-color: rgb(0, 123, 255);
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    border-color: var(--site-color);
+    box-shadow: 0 0 10px rgba(243, 49, 49, 0.5);
 }
 
 form button {
