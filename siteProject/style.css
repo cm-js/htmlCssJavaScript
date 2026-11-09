@@ -73,6 +73,14 @@ p {
     margin-bottom: 16px;
 }
 
+a {
+    color: skyblue;
+}
+
+a:hover {
+    color: lightblue;
+}
+
 /*  ==================
     Header Box Styling
     ==================  */
@@ -320,6 +328,21 @@ form button {
     margin-top: 16px;
     margin-bottom: 4px;
     font-size: 20px;
+}
+
+details {
+    color: grey;
+}
+
+details[open] {
+    color: white;
+}
+
+/* ":not(:has(p))" prevents the triple-line icon from having an underline when hovering on smaller screen sizes */
+summary:hover:not(:has(p)) {
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
 }
 
 /*  ==================
