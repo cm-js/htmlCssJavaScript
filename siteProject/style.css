@@ -265,14 +265,6 @@ main p {
     padding: 10px;
 }
 
-#promo {
-    text-align: center;
-}
-
-video {
-    padding: 12px;
-}
-
 ul {
     color: white;
     list-style-type: square;
@@ -281,7 +273,7 @@ ul {
 
 #catalogue {
     text-align: left;
-    width: 300px;
+    width: 400px;
     margin: auto;
 }
 
@@ -330,15 +322,47 @@ form button {
     font-size: 20px;
 }
 
-details {
-    color: grey;
-}
-
 details[open] {
     color: white;
 }
 
-/* ":not(:has(p))" prevents the triple-line icon from having an underline when hovering on smaller screen sizes */
+/* Specificity nonsense to make sure last items always alternative regardless of existing nesting */
+details:nth-child(odd), details:nth-child(even) details, details:nth-child(odd) details details {
+    background-color: #202020;
+}
+
+details:nth-child(even), details:nth-child(odd) details, details:nth-child(even) details details {
+    background-color: #282828;
+}
+
+.even {
+    background-color: #282828;
+}
+
+details:nth-child(odd) > summary:hover {
+    background-color: #502020;
+}
+
+details:nth-child(even) > summary:hover {
+    background-color: #502828;
+}
+
+/* Puts a border between every detail */
+details:not(:nth-child(17)) {
+    border-bottom: 1px solid white;
+}
+
+details li {
+    padding-top: 4px;
+    padding-bottom: 6px;
+}
+
+summary {
+    padding: 6px;
+    transition-duration: 200ms;
+}
+
+/* ":not(:has(p))" prevents the hamburger icon from having an underline when hovering on smaller screen sizes */
 summary:hover:not(:has(p)) {
     cursor: pointer;
     color: white;
@@ -377,9 +401,5 @@ footer {
     #intro, #context, #content {
         padding-left: 5%;
         padding-right: 5%;
-    }
-
-    video {
-        width: 90%;
     }
 }
