@@ -335,10 +335,6 @@ details:nth-child(even), details:nth-child(odd) details, details:nth-child(even)
     background-color: #282828;
 }
 
-.even {
-    background-color: #282828;
-}
-
 details:nth-child(odd) > summary:hover {
     background-color: #502020;
 }
